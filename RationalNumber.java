@@ -53,6 +53,9 @@ public class RationalNumber extends RealNumber
   *@return true when the RationalNumbers have the same numerators and denominators, false otherwise.
   */
   public boolean equals(RationalNumber other){
+    if (numerator == other.getNumerator() && denominator == other.getDenominator()) {
+      return true;
+    }
     return false;
   }
 
@@ -111,6 +114,7 @@ public class RationalNumber extends RealNumber
   *Return a new RationalNumber that is the product of this and the other
   */
   public RationalNumber multiply(RationalNumber other){
+
     return null;
   }
 
