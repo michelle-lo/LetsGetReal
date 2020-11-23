@@ -15,7 +15,7 @@ public class RationalNumber extends RealNumber
       denominator = 1;
     } else if (deno < 0) {
       numerator = nume * -1;
-      denominator = deno;
+      denominator = deno * -1;
     } else {
       numerator = nume;
       denominator = deno;
@@ -43,7 +43,10 @@ public class RationalNumber extends RealNumber
   *and denominator as this RationalNumber but reversed.
   */
   public RationalNumber reciprocal(){
-    return null;
+    int nume = denominator;
+    int deno = numerator;
+    RationalNumber reciprocal = new RationalNumber(nume, deno);
+    return reciprocal;
   }
   /**
   *@return true when the RationalNumbers have the same numerators and denominators, false otherwise.

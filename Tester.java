@@ -25,8 +25,9 @@ public class Tester {
     print(b1.divide(b1).getValue(), 1.0);
     print(i1.divide(j1).getValue(), 0.5);
     System.out.println("subtract()\n");
-    print(d1.subtract(c1).getValue(), 0.01);
+    print(d1.subtract(c1).getValue(), 10000.01 - 10000);
     print(h1.subtract(g1).getValue(), 19.0);
+
     System.out.println("\n----RationalNumber----\n");
     System.out.println("getValue()\n");
     RationalNumber a2 = new RationalNumber(1, 2);
@@ -36,11 +37,17 @@ public class Tester {
     System.out.println("getNumerator & getDenominator()\n");
     RationalNumber neg = new RationalNumber(9, -1);
     print(neg.getNumerator(), -9);
-    print(neg.getDenominator(), -1);
+    print(neg.getDenominator(), 1);
     print(zero.getNumerator(), 0);
     print(zero.getDenominator(), 1);
-    
-
+    System.out.println("Reciprocal()\n");
+    print(a2.reciprocal().getValue(), 2.0);
+    print(zero.getNumerator(), 0);
+    print(zero.reciprocal().getNumerator(), 0); // a rationalnum of (1/0), the reciprocal, turns into (0/1)
+    print(zero.reciprocal().getDenominator(), 1);
+    print(neg.reciprocal().getNumerator(), -1);
+    print(neg.reciprocal().getDenominator(), 9);
+    print(neg.reciprocal().getValue(), -1.0/9.0);
   }
 
   public static void print (Object actual, Object expected) {
