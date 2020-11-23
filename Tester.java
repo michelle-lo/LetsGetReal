@@ -24,6 +24,10 @@ public class Tester {
     RealNumber j1 = new RealNumber(2.0);
     print(b1.divide(b1).getValue(), 1.0);
     print(i1.divide(j1).getValue(), 0.5);
+    System.out.println("\nsubtract()\n");
+    print(d1.subtract(c1).getValue(), 0.01);
+    print(h1.subtract(g1).getValue(), 19.0);
+
 
 
 
