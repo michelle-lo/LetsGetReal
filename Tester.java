@@ -20,7 +20,13 @@ public class Tester {
     print(c1.multiply(a1).getValue(), 0.0);
     RealNumber i1 = new RealNumber(1.0);
     print(d1.multiply(i1).getValue(), 10000.01);
-    
+    System.out.println("\ndivide()\n");
+    RealNumber j1 = new RealNumber(2.0);
+    print(b1.divide(b1).getValue(), 1.0);
+    print(i1.divide(j1).getValue(), 0.5);
+
+
+
 
 
 
