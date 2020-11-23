@@ -57,6 +57,10 @@ public class Tester {
     RationalNumber d2 = new RationalNumber(401800, 499800); //num/den * 98/98
     print(c2.equals(d2), true);
     print(zero.equals(neg), false);
+    System.out.println("multiply()\n");
+    print(zero.multiply(neg).toString(), "0/1");
+    print(b2.multiply(c2).toString(), "41/102");
+
 
   }
 
