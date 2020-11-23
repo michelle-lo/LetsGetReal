@@ -48,6 +48,10 @@ public class Tester {
     print(neg.reciprocal().getNumerator(), -1);
     print(neg.reciprocal().getDenominator(), 9);
     print(neg.reciprocal().getValue(), -1.0/9.0);
+    RationalNumber b2 = new RationalNumber(2, 4);
+    print(b2.toString(), "1/2");
+    RationalNumber c2 = new RationalNumber(4100, 5100);
+    print(c2.toString(), "41/51");
   }
 
   public static void print (Object actual, Object expected) {

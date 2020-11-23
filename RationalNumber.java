@@ -20,6 +20,7 @@ public class RationalNumber extends RealNumber
       numerator = nume;
       denominator = deno;
     }
+    reduce();
   }
 
   public double getValue(){
@@ -60,7 +61,8 @@ public class RationalNumber extends RealNumber
   *@return the value expressed as "3/4" or "8/3"
   */
   public String toString(){
-    return "0";
+    return "" + numerator + "/" + denominator;
+
   }
 
   /**Calculate the GCD of two integers.
@@ -70,8 +72,28 @@ public class RationalNumber extends RealNumber
   */
   private static int gcd(int a, int b){
     /*use euclids method or a better one*/
-    http://sites.math.rutgers.edu/~greenfie/gs2004/euclid.html
-    return 0;
+    //http://sites.math.rutgers.edu/~greenfie/gs2004/euclid.html
+    a = Math.abs(a);
+    b = Math.abs(b);
+    int origA = a;
+    int origB = b;
+    if (a < b) {
+      a = origB;
+      b = origA;
+    }
+    if (b == 0) {
+      return a;
+    }
+
+    int r = -1;
+    while (r != 0){
+      r = a % b;
+      if (r != 0) {
+        a = b;
+        b = r;
+      }
+    }
+    return b;
   }
 
   /**
@@ -80,7 +102,9 @@ public class RationalNumber extends RealNumber
   *reduced after construction.
   */
   private void reduce(){
-
+    int x = gcd(numerator, denominator);
+    numerator = numerator / x;
+    denominator = denominator / x;
   }
   /******************Operations Return a new RationalNumber!!!!****************/
   /**
