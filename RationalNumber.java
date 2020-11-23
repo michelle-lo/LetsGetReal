@@ -126,19 +126,26 @@ public class RationalNumber extends RealNumber
   *Return a new RationalNumber that is the this divided by the other
   */
   public RationalNumber divide(RationalNumber other){
-    return null;
+    RationalNumber quotient = new RationalNumber(numerator * other.getDenominator(), denominator * other.getNumerator());
+    return quotient;
   }
 
   /**
   *Return a new RationalNumber that is the sum of this and the other
   */
   public RationalNumber add(RationalNumber other){
-    return null;
+    int otherNume = other.getNumerator();
+    int otherDeno = other.getDenominator();
+    RationalNumber sum = new RationalNumber((numerator * otherDeno) + (denominator * otherNume), denominator * otherDeno);
+    return sum;
   }
   /**
   *Return a new RationalNumber that this minus the other
   */
   public RationalNumber subtract(RationalNumber other){
-    return null;
+    int otherNume = other.getNumerator();
+    int otherDeno = other.getDenominator();
+    RationalNumber diff = new RationalNumber((numerator * otherDeno) - (denominator * otherNume), denominator * otherDeno);
+    return diff;
   }
 }

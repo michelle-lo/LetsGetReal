@@ -60,6 +60,17 @@ public class Tester {
     System.out.println("multiply()\n");
     print(zero.multiply(neg).toString(), "0/1");
     print(b2.multiply(c2).toString(), "41/102");
+    System.out.println("divide()\n");
+    RationalNumber e2 = new RationalNumber(5, 2);
+    RationalNumber two = new RationalNumber(2, 1);
+    print(e2.divide(two).toString(), "5/4");
+    print(e2.divide(zero).toString(), "0/1");
+    System.out.println("add()\n");
+    RationalNumber f2 = new RationalNumber(6, 8);
+    print(f2.add(a2).toString(), "5/4");
+    System.out.println("subtract()\n");
+    print(a2.subtract(f2).toString(), "-1/4");
+    print(f2.subtract(a2).toString(), "1/4");
 
 
   }
