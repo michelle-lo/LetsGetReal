@@ -39,7 +39,9 @@ public class RealNumber{
   public RealNumber add(RealNumber other){
      //other can be ANY RealNumber, including a RationalNumber
      //or other subclasses of RealNumber (that aren't written yet)
-     return null;
+     double sumValue = value + other.getValue();
+     RealNumber sum = new RealNumber(sumValue);
+     return sum;
   }
 
   /*
