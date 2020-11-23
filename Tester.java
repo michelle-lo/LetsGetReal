@@ -15,7 +15,15 @@ public class Tester {
     RealNumber g1 = new RealNumber(-10.0);
     RealNumber h1 = new RealNumber(9.0);
     print(g1.add(h1).getValue(), -1.0);
+    System.out.println("\nmultiply()\n");
+    print(g1.multiply(h1).getValue(), -90.0);
+    print(c1.multiply(a1).getValue(), 0.0);
+    RealNumber i1 = new RealNumber(1.0);
+    print(d1.multiply(i1).getValue(), 10000.01);
     
+
+
+
 
 
 
