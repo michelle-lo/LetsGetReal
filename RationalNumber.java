@@ -61,11 +61,18 @@ public class RationalNumber extends Number
 
 
   /**
+  Your RationalNumber toString method should account for denominator of 1,
+  OR a numerator of 0. It should show the whole number when that happens.
   *@return the value expressed as "3/4" or "8/3"
   */
   public String toString(){
+    if (numerator == 0) {
+      return "" + 0;
+    }
+    if (denominator == 1) {
+      return "" + numerator;
+    }
     return "" + numerator + "/" + denominator;
-
   }
 
   /**Calculate the GCD of two integers.

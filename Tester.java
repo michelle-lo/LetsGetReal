@@ -69,14 +69,15 @@ public class Tester {
     print(zero.equals(neg), false);
 
     System.out.println("multiply()\n");
-    print(zero.multiply(neg).toString(), "0/1");
+    print(zero.multiply(neg).toString(), "0");
     print(b2.multiply(c2).toString(), "41/102");
 
     System.out.println("divide()\n");
     RationalNumber e2 = new RationalNumber(5, 2);
     RationalNumber two = new RationalNumber(2, 1);
     print(e2.divide(two).toString(), "5/4");
-    print(e2.divide(zero).toString(), "0/1");
+    print(e2.divide(zero).toString(), "0");
+
     System.out.println("add()\n");
     RationalNumber f2 = new RationalNumber(6, 8);
     print(f2.add(a2).toString(), "5/4");
@@ -85,11 +86,19 @@ public class Tester {
     print(a2.subtract(f2).toString(), "-1/4");
     print(f2.subtract(a2).toString(), "1/4");
 
+    System.out.println("toString()\n");
+    RationalNumber g2 = new RationalNumber(5, 1);
+    print(g2.toString(), "5");
+    print(zero.toString(), "0");
+
+
     System.out.println("----Number----\n");
     System.out.println("----compareTo----\n");
     print(a1.compareTo(a2), -1); // 0, 1/2
     print(a1.compareTo(b1), -1); //0, 0.0001
     print(b1.compareTo(a1), 1);
+
+
 
   }
 
