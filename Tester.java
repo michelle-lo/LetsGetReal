@@ -85,7 +85,11 @@ public class Tester {
     print(a2.subtract(f2).toString(), "-1/4");
     print(f2.subtract(a2).toString(), "1/4");
 
-    System.out.println("\n----Number----\n");
+    System.out.println("----Number----\n");
+    System.out.println("----compareTo----\n");
+    print(a1.compareTo(a2), -1); // 0, 1/2
+    print(a1.compareTo(b1), -1); //0, 0.0001
+    print(b1.compareTo(a1), 1);
 
   }
 

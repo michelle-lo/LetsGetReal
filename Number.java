@@ -6,8 +6,14 @@ public abstract class Number{
   return a positive value when this Number is larger than the other Number
   */
   public int compareTo(Number other){
-    return -1;
-    //TO BE IMPLEMENTED
+    if (equals(other.getValue())) {
+      return 0;
+    }
+    if (getValue() < other.getValue()) {
+      return -1;
+    } else {
+      return 1;
+    }
   }
 
   /*
@@ -29,12 +35,12 @@ public abstract class Number{
 }
 
 /*
-1. Restructure your RealNumber and RationalNumber classes to extend an abstract Number class.
-a. You must move equals to the Number class. (using getValue() )
-b. You must write a compareTo() method in your Number class. (using getValue() )
-c. Your constructors may need to be modified since there is no parameterized superclass constructor to call.
-d. Your RealNumber class will just use the inherited .equals() method.
-e. Your rationalNumber class should have a .equals(RationalNumber) method.
+1. done. Restructure your RealNumber and RationalNumber classes to extend an abstract Number class.
+a. done. You must move equals to the Number class. (using getValue() )
+b. done. You must write a compareTo() method in your Number class. (using getValue() )
+c. done. Your constructors may need to be modified since there is no parameterized superclass constructor to call.
+d. done. Your RealNumber class will just use the inherited .equals() method.
+e. done. Your rationalNumber class should have a .equals(RationalNumber) method.
 f. Your RationalNumber toString method should account for denominator of 1, OR a numerator of 0. It should show the whole number when that happens.
 g. All other methods should stay the same.
 */
